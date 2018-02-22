@@ -1,0 +1,148 @@
+{
+  "languageModel": {
+    "types": [
+      {
+        "name": "LIST_OF_RELAYS",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "Front Bedroom",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "Back Bedroom",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "Master Bedroom",
+              "synonyms": []
+            }
+          }
+        ]
+      },
+      {
+        "name": "LIST_OF_TEMPS",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "Outside",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "Livingroom",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "Network Closet",
+              "synonyms": []
+            }
+          }
+        ]
+      }
+    ],
+    "intents": [
+      {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+      },
+      {
+        "name": "getGarageStatus",
+        "samples": [
+          "garage status",
+          "for garage status",
+          "what is garage status",
+          "what is current garage status"
+        ],
+        "slots": []
+      },
+      {
+        "name": "getTemp",
+        "samples": [
+          "for {tempID} temperature",
+          "get {tempID} temperature",
+          "what is {tempID} temperature",
+          "tell me what {tempID} temperature is",
+          "for {tempID} temp",
+          "get {tempID} temp",
+          "what is {tempID} temp",
+          "tell me what {tempID} temp is"
+        ],
+        "slots": [
+          {
+            "name": "tempID",
+            "type": "LIST_OF_TEMPS"
+          }
+        ]
+      },
+      {
+        "name": "turnAllLightsOff",
+        "samples": [
+          "turn all lights off",
+          "switch all lights off",
+          "set all lights off"
+        ],
+        "slots": []
+      },
+      {
+        "name": "turnAllLightsOn",
+        "samples": [
+          "turn all lights on",
+          "switch all lights on",
+          "set all lights on"
+        ],
+        "slots": []
+      },
+      {
+        "name": "turnLightOff",
+        "samples": [
+          "turn {LightOffID} light off",
+          "switch {LightOffID} light off",
+          "set {LightOffID} light off"
+        ],
+        "slots": [
+          {
+            "name": "LightOffID",
+            "type": "LIST_OF_RELAYS"
+          }
+        ]
+      },
+      {
+        "name": "turnLightOn",
+        "samples": [
+          "turn {LightOnID} light on",
+          "switch {LightOnID} light on",
+          "set {LightOnID} light on"
+        ],
+        "slots": [
+          {
+            "name": "LightOnID",
+            "type": "LIST_OF_RELAYS"
+          }
+        ]
+      }
+    ],
+    "invocationName": "house"
+  }
+}
