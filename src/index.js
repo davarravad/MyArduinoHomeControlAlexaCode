@@ -29,7 +29,7 @@ exports.handler = (event, context) => {
 
         switch(event.request.intent.name) { //switch statement to select the right intent
           case "turnAllLightsOn": //if you told alexa to turn all the lights on this will be true
-          var endpoint = "https://USERNAME:PASSWORD@WEBSITEURL/lightswitch.php?relayset=1&action=update_relay&house_id=HOUSEID&tkn=WEBSITETOKEN&action_data=11111111111111" //https string to log data to phant phant
+          var endpoint = "https://USERNAME:PASSWORD@WEBSITEURL/lightswitch.php?relayset=1&action=update_relay&house_id=HOUSEID&tkn=WEBSITETOKEN&action_data=1111111111111111" //https string to log data to phant phant
           https.get(endpoint, function (result) { //use https get request to send data to phant
           console.log('Success, with: ' + result.statusCode);
           context.succeed(
@@ -45,7 +45,7 @@ exports.handler = (event, context) => {
             break;
 
           case "turnAllLightsOff": //the turn all lights off intent
-            var endpoint2 = "https://USERNAME:PASSWORD@WEBSITEURL/lightswitch.php?relayset=1&action=update_relay&house_id=HOUSEID&tkn=WEBSITETOKEN&action_data=00000000000000"; // phant string to set light state to off
+            var endpoint2 = "https://USERNAME:PASSWORD@WEBSITEURL/lightswitch.php?relayset=1&action=update_relay&house_id=HOUSEID&tkn=WEBSITETOKEN&action_data=0000000000000000"; // phant string to set light state to off
             https.get(endpoint2, function (result) {
             console.log('Success, with: ' + result.statusCode);
             context.succeed(
